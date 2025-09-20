@@ -14,13 +14,16 @@ while True: # Loop until valid input is received
 #ints set to 0 to avoid errors
 sum = 0
 val_number = 0
+cardNum
+cardNumFormat = ""
+count = 4
 #loop to get random numbers to fill the card number 
-for x in range(1,15):  
+for x in range(14):  
     # 14 digits total , why since first digit is user input depending on the card type and last is the validation number
     cardNum.append(random.randint(0,9))#random number between 0-9
 print(cardNum) #printing the card number to check if everything is working
 
-for z in range(2 ,15):#starting from index 2 since index 0 is user input and index 1 is not doubled
+for z in range(15):#starting from index 1 since index 0 is user input and index 1 is not doubled
     if z % 2 == 0:#checking if the index is even , since we only need every other number starting from index 2 to be doubled
         cardNum[z]= cardNum[z]*2 #number at that index is doubled
 print(cardNum) #checking if the numbers are doubled correctly
@@ -47,6 +50,14 @@ print(val_number)#printing the validation number to check if everything is worki
 
 cardNum.append(val_number) #adding the validation number to the end of the card number list to make the total length 16 digits
 
-print(cardNum) #final card number with validation number at the end and the user input at the start
+print(cardNum)#final card number with validation number at the end and the user input at the start
+
+for n in range(cardNum.__len__()): #loop to print the card number without the list format
+    if n % 4 == 0 and n != 0: #adding a space every 4 digits for better readability
+        cardNumFormat = cardNumFormat + " " + str(cardNum[n]) #adding a space before the number
+    else: #if its not a space just add the number
+        cardNumFormat = cardNumFormat + str(cardNum[n]) #adding the number to the string
+print("Card Number: " + cardNumFormat) #printing the card number in a readable format
+
 #example output [4, 7, 8, 2, 4, 7, 3, 2, 3, 5, 2, 8, 5, 8, 5]
 #with a card number of 4264 4808 5678 5510
