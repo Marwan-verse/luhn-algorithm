@@ -61,5 +61,5 @@ for n in range(cardNum.__len__()): #loop to print the card number without the li
         cardNumFormat = cardNumFormat + str(cardNum[n]) #adding the number to the string
 print("Card Number: " + cardNumFormat) #printing the card number in a readable format
 
-#example output [4, 7, 8, 2, 4, 7, 3, 2, 3, 5, 2, 8, 5, 8, 5]
-#with a card number of 4264 4808 5678 5510
+#example output [3, 1, 7, 8, 0, 3, 9, 8, 9, 5, 1, 4, 0, 8, 9, 9]
+#with a card number of 3178 0398 9514 0899
